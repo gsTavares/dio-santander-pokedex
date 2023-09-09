@@ -1,0 +1,1 @@
+# Pokedex project using JavaScript, HTTP Client/Server communication and REST API concepts from Santander Bootcamp Fullstack Java + Angular
