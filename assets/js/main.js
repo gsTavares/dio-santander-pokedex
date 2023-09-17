@@ -7,7 +7,7 @@ let offset = 0;
 const hideDetails = (detailSectionElement, pokemonType) => {
     setTimeout(() => {
         detailSectionElement.innerHTML = "";
-    }, 1000);
+    }, 500);
     detailSectionElement.classList.toggle("show");
     detailSectionElement.classList.toggle(pokemonType);
 }
