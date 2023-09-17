@@ -7,6 +7,8 @@ const convertPokeApiDetailToPokemon = (pokeDetail) => {
     pokemon.types = types
     pokemon.type = type;
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
+    pokemon.stats = pokeDetail.stats;
+    pokemon.moves = pokeDetail.moves;
     return pokemon;
 } 
 
@@ -15,6 +17,12 @@ const pokeApi = {
         return fetch(pokemon.url)
             .then((response) => response.json())
             .then(convertPokeApiDetailToPokemon);
+    },
+
+    getPokemonById: async (pokemonId) => {
+        return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+            .then((response) => response.json())
+            .then(convertPokeApiDetailToPokemon)
     },
 
     getPokemons: async (offset = 0, limit = 20) => {

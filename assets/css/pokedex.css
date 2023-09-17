@@ -76,6 +76,8 @@
     margin: 0;
     display: grid;
     grid-template-columns: 1fr;
+    max-height: 75vh;
+    overflow-y: scroll;
 }
 
 .pokemon {
@@ -85,6 +87,7 @@
     padding: 1rem;
     color: #fff;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .detail {
